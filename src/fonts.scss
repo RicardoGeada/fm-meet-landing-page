@@ -1,0 +1,103 @@
+@use "sass:map";
+
+/* red-hat-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/red-hat-display/red-hat-display-v20-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/red-hat-display/red-hat-display-v20-latin-500.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/red-hat-display/red-hat-display-v20-latin-900.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+$text-presets: (
+  "1": (
+    font-family: (
+      "Red Hat Display",
+      Arial,
+      Helvetica,
+      sans-serif,
+    ),
+    size: 4rem, // 64px
+    weight: 900,
+    line-height: 1.1,
+    letter-spacing: 0,
+  ),
+  "2": (
+    font-family: (
+      "Red Hat Display",
+      Arial,
+      Helvetica,
+      sans-serif,
+    ),
+    size: 2.5rem, // 40px
+    weight: 900,
+    line-height: 1.1,
+    letter-spacing: 0,
+  ),
+  "3": (
+    font-family: (
+      "Red Hat Display",
+      Arial,
+      Helvetica,
+      sans-serif,
+    ),
+    size: 1rem, // 16px
+    weight: 900,
+    line-height: 1.1,
+    letter-spacing: 0.25rem, // 4px
+  ),
+  "4": (
+    font-family: (
+      "Red Hat Display",
+      Arial,
+      Helvetica,
+      sans-serif,
+    ),
+    size: 1.125rem, // 18px
+    weight: 500,
+    line-height: 1.1,
+    letter-spacing: 0,
+  ),
+  "5": (
+    font-family: (
+      "Red Hat Display",
+      Arial,
+      Helvetica,
+      sans-serif,
+    ),
+    size: 1rem, // 16px
+    weight: 900,
+    line-height: 1.5,
+    letter-spacing: 0,
+  ),
+);
+
+@mixin apply-text-preset($name) {
+  $preset: map.get($text-presets, $name);
+  @if $preset {
+    font-family: map.get($preset, font-family);
+    font-size: map.get($preset, size);
+    font-weight: map.get($preset, weight);
+    line-height: map.get($preset, line-height);
+    letter-spacing: map.get($preset, letter-spacing);
+  }
+}
