@@ -15,7 +15,7 @@ function Hero() {
         <source media="(min-width: 1080px)" srcSet={heroImageLeft}/>
         <img src={heroImage} alt="hero-image" />
       </picture>
-      
+
       {isDesktop && (
         <picture>
           <img src={heroImageRight} alt="hero-image-right" />

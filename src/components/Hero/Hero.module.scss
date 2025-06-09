@@ -1,3 +1,5 @@
+@use "./../../fonts.scss"; 
+
 .hero-section {
     padding: var(--space-800) 0;
     display: flex;
@@ -6,4 +8,8 @@
     @media (min-width: 1080px) {
         justify-content: space-between;
     }
+}
+
+.test {
+    @include fonts.apply-text-preset("1");
 }

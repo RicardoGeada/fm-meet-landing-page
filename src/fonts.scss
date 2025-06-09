@@ -37,6 +37,8 @@ $text-presets: (
       sans-serif,
     ),
     size: 4rem, // 64px
+    size-tablet: 3rem, // 48px
+    size-mobile: 2.5rem, // 40px
     weight: 900,
     line-height: 1.1,
     letter-spacing: 0,
@@ -49,6 +51,8 @@ $text-presets: (
       sans-serif,
     ),
     size: 2.5rem, // 40px
+    size-tablet: 2.25rem, // 36px
+    size-mobile: 2rem, // 32px
     weight: 900,
     line-height: 1.1,
     letter-spacing: 0,
@@ -61,6 +65,8 @@ $text-presets: (
       sans-serif,
     ),
     size: 1rem, // 16px
+    size-tablet: 0.875rem, // 14px
+    size-mobile: 0.75rem, // 12px
     weight: 900,
     line-height: 1.1,
     letter-spacing: 0.25rem, // 4px
@@ -73,6 +79,7 @@ $text-presets: (
       sans-serif,
     ),
     size: 1.125rem, // 18px
+    size-tablet: 1rem, // 16px
     weight: 500,
     line-height: 1.1,
     letter-spacing: 0,
@@ -99,5 +106,13 @@ $text-presets: (
     font-weight: map.get($preset, weight);
     line-height: map.get($preset, line-height);
     letter-spacing: map.get($preset, letter-spacing);
+
+    @media (max-width: 1080px) {
+      font-size: map.get($preset, size-tablet);
+    }
+
+    @media (max-width: 768px) {
+      font-size: map.get($preset, size-mobile);
+    }
   }
 }
