@@ -9,9 +9,9 @@ function Hero() {
 
   return (
     <section className={styles["hero-section"]}>
-      <picture>
+      <picture className={styles["hero-section__image"]}>
         <source media="(min-width: 1080px)" srcSet={heroImageLeft} />
-        <img src={heroImage} alt="hero-image" />
+        <img src={heroImage} alt="hero-image"  />
       </picture>
 
       <div className={styles["hero-section__content"]}>

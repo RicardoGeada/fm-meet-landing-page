@@ -1,9 +1,9 @@
 @use "./../../fonts.scss";
 
 .hero-section {
-//   max-width: 1440px;
-//   margin: auto;
-  padding: var(--space-800) var(--space-400);
+  max-width: 1440px;
+  margin: auto;
+  padding: var(--space-800) 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,12 +11,25 @@
   gap: var(--space-600);
 
   @media (min-width: 768px) {
-    
     gap: var(--space-900);
   }
 
   @media (min-width: 1080px) {
     flex-direction: row;
+  }
+
+  &__image {
+    @media (max-width: 1080px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      img {
+        flex-shrink: 0;
+        min-width: 433px;
+        width: 106%;
+      }
+    }
   }
 
   &__content {
@@ -25,8 +38,12 @@
     flex-direction: column;
     text-align: center;
     gap: var(--space-300);
-    margin: auto;
     flex-shrink: 0;
+    margin: 0 var(--space-400);
+
+    @media (min-width: 768px) {
+      margin: auto;
+    }
   }
 
   &__headline {
@@ -44,8 +61,8 @@
     gap: var(--space-200);
 
     @media (min-width: 768px) {
-        justify-content: center;
-        flex-direction: row;
+      justify-content: center;
+      flex-direction: row;
     }
   }
 }
