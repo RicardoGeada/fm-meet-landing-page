@@ -1,8 +1,12 @@
+@use "./fonts.scss";
+
 :root {
   // === Colors ===
   --color-cyan-600: #4d96a9;
+  --color-cyan-400: #71c0d4;
   --color-cyan-300: #8fe3f9;
   --color-purple-600: #855fb1;
+  --color-purple-400: #b188dd;
   --color-purple-300: #d9b8ff;
   --color-slate-900: #28283d;
   --color-slate-600: #87879d;
@@ -28,4 +32,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+// === buttons ===
+.btn {
+  padding: var(--space-200) var(--space-500);
+  border-radius: 29px;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  width: fit-content;
+  @include fonts.apply-text-preset("5");
+  
+
+  &--blue {
+    background-color: var(--color-cyan-600);
+    &:hover {
+      background-color: var(--color-cyan-400)
+    }
+  }
+
+  &--purple {
+    background-color: var(--color-purple-600);
+    &:hover {
+      background-color: var(--color-purple-400);
+    }
+  }
+
+  &__subtext {
+    color: var(--color-slate-600);
+    &--blue {
+      color: var(--color-cyan-300);
+    }
+    &--purple {
+      color: var(--color-purple-300);
+    }
+  }
 }

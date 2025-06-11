@@ -21,8 +21,8 @@ function Hero() {
           collaborate across any device.
         </p>
         <div className={styles["hero-section__buttons"]}>
-          <button>Download v1.3</button>
-          <button>What is it?</button>
+          <button className="btn btn--blue">Download <span className="btn__subtext btn__subtext--blue">v1.3</span></button>
+          <button className="btn btn--purple">What is it?</button>
         </div>
       </div>
 
