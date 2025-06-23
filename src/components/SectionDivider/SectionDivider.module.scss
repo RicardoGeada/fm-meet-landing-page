@@ -21,6 +21,7 @@
         justify-content: center;
         align-items: center;
         color: var(--color-slate-600);
+        background-color: var(--color-white);
         @include fonts.apply-text-preset("5");
     }
 }

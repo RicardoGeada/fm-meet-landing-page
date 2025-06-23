@@ -42,6 +42,7 @@
   color: var(--color-white);
   cursor: pointer;
   width: fit-content;
+  min-width: fit-content;
   @include fonts.apply-text-preset("5");
   
 
