@@ -52,18 +52,18 @@
   }
 
   &__eyebrow{
-    @include fonts.apply-text-preset("3");
     color: var(--color-cyan-600);
+    @include fonts.apply-text-preset("3");
   }
 
   &__title {
-    @include fonts.apply-text-preset("2");
     color: var(--color-slate-900);
+    @include fonts.apply-text-preset("2");
   }
 
   &__description {
-    @include fonts.apply-text-preset("4");
     color: var(--color-slate-600);
+    @include fonts.apply-text-preset("4");
   }
 
 }
