@@ -9,6 +9,14 @@
   max-width: 70em; /* 1120px */
   margin: auto;
 
+  @media (min-width: 48em) {
+    padding: var(--space-700) var(--space-400) var(--space-800);
+  }
+
+  @media (min-width: 67.5em) {
+    padding: var(--space-700) var(--space-1000) var(--space-900);
+  }
+
   &__image-collage {
     display: grid;
     grid-template-rows: repeat(2, 1fr);

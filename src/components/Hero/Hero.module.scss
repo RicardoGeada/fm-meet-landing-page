@@ -2,6 +2,7 @@
 
 .hero-section {
   max-width: 90em; /* 1440px */
+  overflow-x: hidden;
   margin: auto;
   padding: var(--space-800) 0;
   display: flex;
@@ -12,10 +13,12 @@
 
   @media (min-width: 48em) {
     gap: var(--space-900);
+    padding: var(--space-800) 0;
   }
 
   @media (min-width: 67.5em) {
     flex-direction: row;
+    gap: var(--space-400);
   }
 
   &__image {
@@ -45,13 +48,19 @@
     @media (min-width: 48em) {
       margin: auto;
     }
+
+    @media (min-width: 67.5em) {
+      gap: var(--space-400);
+    }
   }
 
   &__headline {
+    color: var(--color-slate-900);
     @include fonts.apply-text-preset("1");
   }
 
   &__description {
+    color: var(--color-slate-600);
     @include fonts.apply-text-preset("4");
   }
 
