@@ -5,12 +5,16 @@ import MainContent from "../../components/MainContent/MainContent";
 import "./Home.scss";
 
 function Home() {
-  return (<>
-    <Header/>
-    <Hero/>
-    <MainContent/>
-    <Footer />
-  </>);
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <MainContent />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 export default Home;

@@ -2,5 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: end;
-    padding:  48px 16px 0px;
+    padding:  var(--space-600) var(--space-200) 0px;
+
+    @media (min-width: 67.5em) {
+        padding: var(--space-1000) var(--space-1000) 0px;
+    }
 }

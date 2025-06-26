@@ -107,11 +107,11 @@ $text-presets: (
     line-height: map.get($preset, line-height);
     letter-spacing: map.get($preset, letter-spacing);
 
-    @media (max-width: 1080px) {
+    @media (max-width: 67.5em) {
       font-size: map.get($preset, size-tablet);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 48em) {
       font-size: map.get($preset, size-mobile);
     }
   }

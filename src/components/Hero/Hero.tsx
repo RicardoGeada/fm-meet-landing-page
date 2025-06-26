@@ -5,12 +5,12 @@ import heroImageRight from "./../../assets/images/desktop/image-hero-right.png";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 function Hero() {
-  const isDesktop = useMediaQuery("(min-width: 1080px)");
+  const isDesktop = useMediaQuery("(min-width: 67.5em)");
 
   return (
     <section className={styles["hero-section"]}>
       <picture className={styles["hero-section__image"]}>
-        <source media="(min-width: 1080px)" srcSet={heroImageLeft} />
+        <source media="(min-width: 67.5em)" srcSet={heroImageLeft} />
         <img src={heroImage} alt="hero-image"  />
       </picture>
 
@@ -21,8 +21,8 @@ function Hero() {
           collaborate across any device.
         </p>
         <div className={styles["hero-section__buttons"]}>
-          <button className="btn btn--blue">Download <span className="btn__subtext btn__subtext--blue">v1.3</span></button>
-          <button className="btn btn--purple">What is it?</button>
+          <button className="btn btn--blue" type="button">Download <span className="btn__subtext btn__subtext--blue">v1.3</span></button>
+          <button className="btn btn--purple" type="button">What is it?</button>
         </div>
       </div>
 

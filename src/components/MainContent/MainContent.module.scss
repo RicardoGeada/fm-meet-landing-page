@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-800);
-  max-width: 1120px;
+  max-width: 70em; /* 1120px */
   margin: auto;
 
   &__image-collage {
@@ -16,7 +16,7 @@
     gap: var(--space-200);
     width: 100%;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48em) {
       grid-template-rows: 1fr;
       grid-template-columns: repeat(4, 1fr);
     }
@@ -35,12 +35,12 @@
     align-items: center;
     gap: var(--space-400);
 
-    @media (min-width: 768px) {
-        max-width: 504px;
+    @media (min-width: 48em) {
+        max-width: 31.5em; /* 504px */
     }
 
-    @media (min-width: 1080px) {
-        max-width: 544px;
+    @media (min-width: 67.5em) {
+        max-width: 34em; /* 544px */
     }
   }
 
@@ -48,7 +48,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-200);
-    max-width: 445px
+    max-width: 27.8125em; /* 445px */
   }
 
   &__eyebrow{
